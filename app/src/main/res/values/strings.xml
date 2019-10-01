@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">StudentPortal</string>
     <string name="action_settings">Settings</string>
+    <string name="vlo_text">Vlo \nhttps://vlo.informatica.hva\n.nl</string>
+    <string name="schedule_text">Schedule \nhttps://rooster.hva.nl</string>
+    <string name="sis_text">Sis \nhttps://sis.hva.nl</string>
+    <string name="hva_text">HvA \nhttps://hva.nl</string>
+    <string name="titleHint_text">Title</string>
+    <string name="hintUrl_text">Url</string>
+    <string name="portalButton_text">Add Portal</string>
 </resources>
