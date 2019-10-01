@@ -1,5 +1,6 @@
 package com.example.studentportal
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -16,10 +17,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         initViews()
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
+        fab.setOnClickListener { startAddActivity() }
     }
 
     private fun initViews(){
@@ -39,5 +37,10 @@ class MainActivity : AppCompatActivity() {
             R.id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    private fun startAddActivity() {
+        val intent = Intent(this, AddActivity::class.java)
+        startActivity(intent)
     }
 }
