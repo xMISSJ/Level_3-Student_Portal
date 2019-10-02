@@ -12,7 +12,6 @@ class AddActivity : AppCompatActivity() {
 
     private var portalUri: Uri? = null
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add)
@@ -39,6 +38,10 @@ class AddActivity : AppCompatActivity() {
             Toast.makeText(this,"The portal cannot be empty!"
                 , Toast.LENGTH_SHORT).show()
         }
+    }
+
+    companion object {
+        const val EXTRA_PORTAL = "EXTRA_PORTAL"
     }
 }
 
