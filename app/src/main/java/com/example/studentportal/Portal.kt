@@ -7,5 +7,5 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class Portal(
     val portalName: String,
-    val portalUri: Uri?
+    val portalUrl: String
 ) : Parcelable

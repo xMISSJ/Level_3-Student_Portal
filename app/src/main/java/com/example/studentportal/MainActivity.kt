@@ -3,18 +3,16 @@ package com.example.studentportal
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.studentportal.AddActivity.Companion.EXTRA_PORTAL
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
+
+
 
 const val ADD_PORTAL_REQUEST_CODE = 100
 
@@ -28,16 +26,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
         initViews()
-
         fab.setOnClickListener { startAddActivity() }
     }
 
     private fun initViews(){
         // Initialize the recycler view with a linear layout manager, adapter
-        rvPortals.layoutManager = GridLayoutManager(this@MainActivity, RecyclerView.VERTICAL)
+        rvPortals.layoutManager = GridLayoutManager(this@MainActivity, 2)
         rvPortals.adapter = portalAdapter
-        rvPortals.addItemDecoration(DividerItemDecoration(this@MainActivity, DividerItemDecoration.VERTICAL)
-        )
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

@@ -48,7 +48,7 @@ class PortalAdapter (private val portals: List<Portal>) :
      */
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(portal: Portal) {
-            itemView.btnAddedPortal.text = portal.portalName + "\n" + portal.portalUri
+            itemView.btnAddedPortal.text = portal.portalName + "\n" + portal.portalUrl
         }
     }
 }
