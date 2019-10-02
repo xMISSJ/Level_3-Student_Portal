@@ -2,7 +2,6 @@ package com.example.studentportal
 
 import android.app.Activity
 import android.content.Intent
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -15,8 +14,8 @@ class AddActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add)
         initViews()
-        btnAddPortal.setOnClickListener{}
         btnAddPortal.setOnClickListener{ onAddClick()}
+        etUrl.setText("http://")
     }
 
     private fun initViews() {

@@ -2,6 +2,7 @@ package com.example.studentportal
 
 import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
@@ -11,8 +12,6 @@ import com.example.studentportal.AddActivity.Companion.EXTRA_PORTAL
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
-
-
 
 const val ADD_PORTAL_REQUEST_CODE = 100
 
@@ -27,9 +26,13 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         initViews()
         fab.setOnClickListener { startAddActivity() }
+        btnVlo.setOnClickListener { openBrowser("vlo") }
+        btnSchedule.setOnClickListener { openBrowser("schedule") }
+        btnSis.setOnClickListener { openBrowser("sis") }
+        btnHva.setOnClickListener{ openBrowser("hva") }
     }
 
-    private fun initViews(){
+    private fun initViews() {
         // Initialize the recycler view with a linear layout manager, adapter
         rvPortals.layoutManager = GridLayoutManager(this@MainActivity, 2)
         rvPortals.adapter = portalAdapter
@@ -66,6 +69,15 @@ class MainActivity : AppCompatActivity() {
                     portalAdapter.notifyDataSetChanged()
                 }
             }
+        }
+    }
+
+    private fun openBrowser(category: String) {
+        when (category) {
+            "vlo" -> startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://hva.nl")))
+            "schedule" -> startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://rooster.hva.nl")))
+            "sis" -> startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://sis.hva.nl")))
+            "hva" -> startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://vlo.informatica.hva.nl")))
         }
     }
 }
