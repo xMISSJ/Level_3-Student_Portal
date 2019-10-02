@@ -8,4 +8,5 @@
     <string name="titleHint_text">Title</string>
     <string name="hintUrl_text">Url</string>
     <string name="portalButton_text">Add Portal</string>
+    <string name="placeholder_text">PortalName \nhttps://PortalLink.com</string>
 </resources>
