@@ -8,8 +8,6 @@ import android.os.Bundle
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_add.*
 
-const val EXTRA_PORTAL = "EXTRA_PORTAL"
-
 class AddActivity : AppCompatActivity() {
 
     private var portalUri: Uri? = null

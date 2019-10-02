@@ -14,6 +14,8 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 
+const val EXTRA_PORTAL = "EXTRA_PORTAL"
+
 class MainActivity : AppCompatActivity() {
 
     private val portals = arrayListOf<Portal>()
