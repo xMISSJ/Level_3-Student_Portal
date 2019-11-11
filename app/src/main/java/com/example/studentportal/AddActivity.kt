@@ -31,7 +31,6 @@ class AddActivity : AppCompatActivity() {
             resultIntent.putExtra(EXTRA_PORTAL, portal)
             // This resultIntent is then passed back to the calling activity.
             setResult(Activity.RESULT_OK, resultIntent)
-            startActivity(resultIntent)
             finish()
         } else {
             Toast.makeText(this,"The portal cannot be empty!"
