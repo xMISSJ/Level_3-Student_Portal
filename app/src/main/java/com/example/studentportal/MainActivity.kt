@@ -56,7 +56,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun startAddActivity() {
         val intent = Intent(this, AddActivity::class.java)
-        startActivity(intent)
         startActivityForResult(intent, ADD_PORTAL_REQUEST_CODE)
     }
 
@@ -80,4 +79,5 @@ class MainActivity : AppCompatActivity() {
             "hva" -> startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://vlo.informatica.hva.nl")))
         }
     }
+
 }
